@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloRECUPERAR.css">
+    <title>Recuperar Contraseña</title>
+</head>
+<body>
+    <section>
+        <form id="recoveryForm">
+            <h1>Recuperar Contraseña</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="email" required>
+                <label for="email">Correo Electrónico</label>
+            </div>
+            <button type="submit">Recuperar Contraseña</button>
+            <div class="login">
+                <p>¿Recuerdas tu contraseña? <a href="index.html">Iniciar sesión</a></p>
+            </div>
+            <p id="mensajeExito" style="color: green;"></p> <!-- Mensaje de éxito -->
+            <p id="mensajeError" style="color: red;"></p> <!-- Mensaje de error -->
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const recoveryForm = document.querySelector('#recoveryForm');
+            recoveryForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evitar el envío del formulario
+
+                const email = document.querySelector('#email').value;
+
+                // Aquí podrías implementar la lógica para enviar un correo de recuperación
+                // En este ejemplo se mostrará un mensaje de éxito simulado
+                const emailExito = 'usuario@example.com'; // Reemplaza con un correo válido para simular el éxito
+
+                if (email === emailExito) {
+                    // Mostrar mensaje de éxito
+                    document.querySelector('#mensajeExito').innerText = 'Se ha enviado un correo con instrucciones para recuperar tu contraseña.';
+                    // Limpiar mensaje de error si existía
+                    document.querySelector('#mensajeError').innerText = '';
+                } else {
+                    // Mostrar mensaje de error
+                    document.querySelector('#mensajeError').innerText = 'El correo electrónico no coincide con ningún usuario registrado.';
+                    // Limpiar mensaje de éxito si existía
+                    document.querySelector('#mensajeExito').innerText = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

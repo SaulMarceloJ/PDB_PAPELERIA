@@ -1,0 +1,38 @@
+/* Estilos para la barra de opciones */
+.list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: rgb(244, 248, 241);
+    font-weight: 700;
+    transition: color 0.3s ease; /* Transición al cambiar el color */
+}
+
+.link:hover {
+    color: coral; /* Color al pasar el cursor */
+}
+
+
+
+/* Estilos para las imágenes con efecto de animación */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease; /* Transición al aplicar transformación */
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Efecto de escala al pasar el cursor */
+}

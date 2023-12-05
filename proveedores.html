@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estiloFROM.css">
+    <title>Gestión de Proveedores</title>
+</head>
+<body>
+    <h1>Gestión de Proveedores</h1>
+
+    <form method="post" action="cproveedores.php">
+        <label for="proveedor_id">ID del Proveedor:</label>
+        <input type="text" name="proveedor_id" id="proveedor_id" required>
+        <br><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <br><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" name="direccion" id="direccion" required>
+        <br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="number" name="telefono" id="telefono" required>
+        <br><br>
+
+        <label for="correo">Correo:</label>
+        <input type="text" name="correo" id="correo" required>
+        <br><br>
+
+        <input type="submit" name="insertar" value="Insertar">
+        <input type="submit" name="eliminar" value="Eliminar">
+        <input type="submit" name="actualizar" value="Actualizar">
+    </form>
+</body>
+</html>

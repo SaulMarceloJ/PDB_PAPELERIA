@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estiloFROM.css">
+    <title>Gestión de Ventas</title>
+</head>
+<body>
+    <h1>Gestión de Ventas</h1>
+
+    <form method="post" action="cventas.php">
+        <label for="venta_id">ID de Venta:</label>
+        <input type="text" name="venta_id" id="venta_id" required>
+        <br><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha" required>
+        <br><br>
+
+        <label for="producto">Producto:</label>
+        <input type="text" name="producto" id="producto" required>
+        <br><br>
+
+        <label for="precio_producto">Precio del Producto:</label>
+        <input type="number" name="precio_producto" id="precio_producto" step="0.01" required>
+        <br><br>
+
+        <label for="total">Total:</label>
+        <input type="number" name="total" id="total" step="0.01" required>
+        <br><br>
+
+        <label for="cliente_id">ID del Cliente:</label>
+        <input type="text" name="cliente_id" id="cliente_id" required>
+        <br><br>
+
+        <input type="submit" name="insertar" value="Insertar">
+        <input type="submit" name="eliminar" value="Eliminar">
+        <input type="submit" name="actualizar" value="Actualizar">
+        
+        
+    </form>
+</body>
+</html>

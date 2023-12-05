@@ -1,0 +1,57 @@
+/* Reset de estilos para el body y el HTML */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* Estilos para la página de mantenimiento */
+  .maintenance-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f5f5f5; /* Color de fondo */
+  }
+  
+  .maintenance-content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: #fff; /* Color de fondo del contenido */
+    max-width: 80%;
+  
+    /* Efectos y animaciones */
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333; /* Color del texto del encabezado */
+    transition: color 0.3s ease-in-out; /* Transición para el color del texto */
+  }
+  
+  p {
+    font-size: 18px;
+    color: #555; /* Color del texto del párrafo */
+    line-height: 1.6;
+    transition: color 0.3s ease-in-out; /* Transición para el color del texto */
+  }
+  
+  /* Efecto hover sobre el texto */
+  .maintenance-content:hover h1,
+  .maintenance-content:hover p {
+    color: #e74c3c; /* Cambio de color al pasar el mouse */
+  }
+  
